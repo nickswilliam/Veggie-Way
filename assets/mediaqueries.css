@@ -1,0 +1,735 @@
+/*---Medium Devices & Notebooks ---*/
+
+@media (max-width: 1024px) {
+    #hero {
+        max-width: 956px;
+        gap: 50px;
+    }
+
+    #hero h1 {
+        width: 50%;
+        right: 0;
+        font-size: 36px;
+    }
+
+    #hero p {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .hbtn-01,
+    .hbtn-02 {
+        font-size: 18px;
+    }
+
+    #about {
+        max-width: 956px;
+        gap: 40px;
+        padding: 80px 20px;
+    }
+
+    #about h2 {
+        font-size: 32px;
+    }
+
+    #about p {
+        width: 70%;
+        font-size: 20px;
+        background-color: #d55f10e7;
+    }
+
+    .about-prod {
+        margin-top: 50px;
+        align-items: flex-start;
+        margin-left: 50px;
+    }
+
+    .about-prod h3 {
+        font-size: 20px;
+        width: 70%;
+        padding: 10px 40px;
+        text-align: center;
+    }
+
+    .about-prod button {
+        align-self: flex-end;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #products {
+        max-width: 956px;
+        gap: 50px;
+        padding: 80px 20px;
+    }
+
+    .prod-top-info {
+        gap: 20px;
+    }
+
+    .prod-top-info h2 {
+        font-size: 26px;
+        padding: 10px;
+    }
+
+    .prod-top-info p {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .prod-top-info h3 {
+        font-size: 20px;
+        padding: 10px;
+        width: 70%;
+    }
+
+    .prod-categ {
+        gap: 15px;
+    }
+
+    .prod-type {
+        transform: scale(0.90);
+    }
+
+    #products h4 {
+        font-size: 24px;
+    }
+
+    #products h4 button {
+        font-size: 20px;
+    }
+
+    #contact {
+        max-width: 956px;
+        gap: 30px;
+        padding: 80px 20px;
+    }
+
+    #contact .h2-inf {
+        font-size: 26px;
+        width: 90%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #contact .h3-inf {
+        font-size: 24px;
+        padding: 10px;
+        width: 70%;
+    }
+
+    .cont-form {
+        gap: 30px;
+        transform: scale(0.90);
+    }
+
+    .form-cont {
+        width: 400px;
+    }
+
+    #contact .text-phrase {
+        font-size: 18px;
+        width: 60%;
+    }
+
+    .soc-ul {
+        gap: 20px;
+    }
+
+    .soc-ul li a i {
+        font-size: 18px;
+    }
+
+    footer h6 {
+        font-size: 18px;
+    }
+
+}
+
+/*//--- iPADS Tables & Some Mobile Devices ---//*/
+
+@media (max-width: 768px) {
+    header .logo_text {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    header nav .toggle-icon i {
+        display: flex;
+    }
+
+    nav .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        padding: 20px 40px;
+        background-color: var(--bg-soft-green);
+        z-index: 3;
+        border-bottom-left-radius: 10px;
+        box-shadow: -4px 4px 8px var(--black-text);
+    }
+
+    .menu-toggle:checked+.navbar {
+        display: flex;
+    }
+
+    .menu-toggle:checked + .navbar {
+        animation: slide-left 0.15s ease forwards alternate, fade 0.15s ease-in forwards alternate;
+    }
+    
+    .menu-toggle:not(:checked) + .navbar {
+        animation: slide-right 0.15s ease-in, fade 0.15s ease-in;
+    }
+
+    #hero {
+        max-width: 700px;
+        gap: 30px;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+        width: 80%;
+    }
+
+    #hero p {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .hbtn-01,
+    .hbtn-02 {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    #about {
+        max-width: 700px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    #about h2 {
+        font-size: 28px;
+        padding: 6px 12px;
+        transform: rotateZ(-2deg);
+    }
+
+    #about p {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about-prod {
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .about-prod h3 {
+        font-size: 16px;
+        padding: 5px 30px;
+        width: 100%;
+    }
+
+    .about-prod button {
+        align-self: center;
+        font-size: 16px;
+        padding: 5px 12px;
+        right: 0;
+        background-color: var(--white);
+    }
+
+    #products {
+        max-width: 700px;
+        gap: 30px;
+        padding: 80px 20px;
+    }
+
+    .prod-top-info {
+        gap: 20px;
+    }
+
+    .prod-top-info h2 {
+        font-size: 22px;
+        width: 80%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .prod-top-info p {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .prod-top-info h3 {
+        width: 80%;
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .prod-categ {
+        transform: scale(1.02);
+    }
+
+    #products h4 {
+        margin-top: 40px;
+        font-size: 20px;
+        text-align: center;
+        padding: 5px 10px;
+        width: 80%;
+    }
+
+    #contact {
+        max-width: 700px;
+        gap: 30px;
+    }
+
+    #contact .h2-inf {
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    #contact .h3-inf {
+        font-size: 20px;
+        padding: 5px 10px;
+        width: 80%;
+    }
+
+    .cont-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #contact .text-phrase {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 5px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    footer .logo_text {
+        gap: 5px;
+        transform: scale(0.90);
+    }
+
+    .soc-ul {
+        gap: 15px;
+        transform: scale(0.90);
+    }
+
+    .soc-ul li a i>span {
+        display: none;
+    }
+
+    footer h6 {
+        font-size: 14px;
+    }
+
+}
+
+
+/*//  --- Mobile Devices & Small Devices --- //*/
+@media (max-width: 480px) {
+    .navbar {
+        left: 0px;
+        text-align: center;
+        border-bottom-right-radius: 10px;
+    }
+
+    .menu-toggle:checked+.navbar {
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 4px 8px var(--black-text);
+    }
+
+    .menu-toggle:checked + .navbar {
+        animation: slide-down 0.2s ease, fade 0.15s ease-in;
+    }
+    
+    .menu-toggle:not(:checked) + .navbar {
+        animation: slide-up 0.15s ease-in;
+    }
+
+
+    #hero {
+        max-width: 400px;
+        gap: 20px;
+    }
+
+    #hero h1 {
+        width: 100%;
+        font-size: 24px;
+        padding: 6px;
+    }
+
+    #hero p {
+        width: 100%;
+        padding: 6px;
+    }
+
+    .hero-btns {
+        gap: 10px;
+    }
+
+    .hbtn-01,
+    .hbtn-02 {
+        padding: 5px;
+        border-radius: 14px;
+        font-size: 15px;
+    }
+
+    #about {
+        max-width: 400px;
+        gap: 20px;
+    }
+
+    #about h2 {
+        font-size: 24px;
+        transform: rotateZ(-1deg);
+        padding: 6px;
+    }
+
+    #about p {
+        width: 100%;
+        letter-spacing: 0px;
+        line-height: 105%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #products {
+        max-width: 400px;
+        gap: 20px;
+    }
+
+    .prod-top-info h2 {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .prod-top-info p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .prod-top-info h3 {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .prod-categ {
+        justify-content: center;
+        gap: 5px;
+        max-width: 300px;
+    }
+
+    .prod-type {
+        transform: scale(0.80);
+    }
+
+    #products h4 {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    #contact {
+        max-width: 400px;
+        gap: 20px;
+    }
+
+    #contact .h2-inf {
+        font-size: 18px;
+        padding: 3px;
+        width: 100%;
+    }
+
+    #contact .h3-inf {
+        font-size: 16px;
+        padding: 5px;
+        width: 95%;
+    }
+
+    .cont-form {
+        gap: 20px;
+        max-width: 320px;
+    }
+
+    .form-cont {
+        transform: scale(0.80);
+    }
+
+    .contact-page {
+        transform: scale(0.90);
+    }
+
+    #contact .text-phrase {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+
+/*////------------------------------------------------  ////*/
+
+/*// ---Media-Queries for Register.html & Login.html--- //*/
+
+/*---Medium Devices & Notebooks ---*/
+
+@media (max-width: 1024px) {
+
+    .rbg #register,
+    .lbg #login {
+        max-width: 956px;
+        gap: 25px;
+    }
+
+    .rbg #register h1,
+    .lbg #login h1 {
+        font-size: 32px;
+        width: 90%;
+    }
+
+    .rbg #register h2,
+    .lbg #login h2 {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .rbg .register-data form,
+    .lbg .login-data form {
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    .rbg .register-data form p,
+    .lbg .login-data form p {
+        font-size: 28px;
+    }
+
+    .rbg .reg-box,
+    .lbg .log-box {
+        gap: 15px;
+    }
+
+    .rbg .reg-box label,
+    .lbg .log-box label {
+        font-size: 17px;
+        padding: 2px;
+    }
+
+    .rbg .reg-box input,
+    .lbg .log-box input {
+        font-size: 17px;
+        padding: 8px 20px;
+        width: 250px;
+    }
+
+    .rbg .reg-check label {
+        font-size: 17px;
+        padding: 8px 15px;
+    }
+
+    .rbg #subm-reg,
+    .lbg #subm-log {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+
+    .rbg #register h3,
+    .lbg #login h3 {
+        font-size: 22px;
+    }
+
+    .rbg #register button,
+    .lbg #login button {
+        font-size: 22px;
+        padding: 8px 16px;
+    }
+}
+
+
+/*//--- iPADS Tables & Some Mobile Devices ---//*/
+
+@media (max-width: 768px) {
+
+    .rbg #register,
+    .lbg #login {
+        max-width: 700px;
+        gap: 20px;
+    }
+
+    .rbg #register h1,
+    .lbg #login h1 {
+        font-size: 30px;
+        width: 95%;
+    }
+
+    .rbg #register h2,
+    .lbg #login h2 {
+        font-size: 18px;
+        width: 95%;
+    }
+
+    .rbg .register-data form,
+    .lbg .login-data form {
+        gap: 15px;
+        padding: 20px 20px;
+        align-items: center;
+    }
+
+    .rbg .register-data form p,
+    .lbg .login-data form p {
+        font-size: 28px;
+    }
+
+    .rbg .reg-box,
+    .lbg .log-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .rbg .reg-box label,
+    .lbg .log-box label {
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    .rbg .reg-box input,
+    .lbg .log-box input {
+        font-size: 16px;
+        padding: 8px 20px;
+        width: 300px;
+    }
+
+    .rbg .reg-box input::placeholder,
+    .lbg .log-box input::placeholder {
+        text-align: center;
+    }
+
+    .rbg .reg-check label {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .rbg #subm-reg,
+    .lbg #subm-log {
+        padding: 6px 12px;
+        font-size: 16px;
+    }
+
+    .rbg #register h3,
+    .lbg #login h3 {
+        font-size: 20px;
+    }
+
+    .rbg #register button,
+    .lbg #login button {
+        font-size: 20px;
+        padding: 6px 14px;
+    }
+}
+
+
+/*//  --- Mobile Devices & Small Devices --- //*/
+@media (max-width: 480px) {
+    .rbg #register,
+    .lbg #login {
+        max-width: 400px;
+        gap: 15px;
+        padding: 80px 15px;
+    }
+
+    .rbg #register h1,
+    .lbg #login h1 {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .rbg #register h2,
+    .lbg #login h2 {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .rbg .register-data form,
+    .lbg .login-data form {
+        gap: 15px;
+        padding: 15px 15px;
+        align-items: center;
+    }
+
+    .rbg .register-data form p,
+    .lbg .login-data form p {
+        font-size: 24px;
+    }
+
+    .rbg .reg-box,
+    .lbg .log-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .rbg .reg-box label,
+    .lbg .log-box label {
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .rbg .reg-box input,
+    .lbg .log-box input {
+        font-size: 15px;
+        padding: 5px 10px;
+        width: 240px;
+    }
+
+    .rbg .reg-box input::placeholder,
+    .lbg .log-box input::placeholder {
+        text-align: center;
+    }
+
+    .rbg .reg-check label {
+        font-size: 14px;
+        padding: 6px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .rbg .reg-check label::before{
+        top: 10px;
+        margin-right: 10px;
+    }
+
+    .rbg #subm-reg,
+    .lbg #subm-log {
+        padding: 6px 10px;
+        font-size: 15px;
+    }
+
+    .rbg #register h3,
+    .lbg #login h3 {
+        font-size: 18px;
+    }
+
+    .rbg #register button,
+    .lbg #login button {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}

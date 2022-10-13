@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href="./assets/broco-icon.png" type="icon/png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/animations.css">
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/register-login.css">
+
+</head>
+<body>
+    
+    <header>
+        <div class="logo_text">
+            <img src="./assets/logo.png" alt="logo-vw">
+            <p>VEGGIE-WAY</p>
+        </div>
+
+        <nav>
+            <label for="menu-toggle" class="toggle-icon">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+
+            </label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+
+            <ul class="navbar">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html#about">Sobre Nosotros</a></li>
+                <li><a href="./index.html#products">Productos</a></li>
+                <li><a href="./index.html#contact">Contacto</a></li>
+                <li><a href="./register.html">Registro</a></li>
+            </ul>
+
+            <div class="overlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="lbg">
+            <section id="login">
+                <h1>BIENVENID@ INGRESÁ A TU CUENTA</h1>
+                <h2>Ingresá tus datos previamente registrados para ingresar al E-Shop</h2>
+
+                <div class="login-data">
+                    <form action="#">
+
+                        <p>LOGIN!</p>
+
+                        <div class="log-box">
+                            <label for="mail-log">E-Mail: </label>
+                            <input type="email" id="mail-log" required placeholder="Ingrese correo electrónico">
+                        </div>
+
+                        <div class="log-box">
+                            <label for="pass-log1">Contraseña: </label>
+                            <input type="password" id="pass-log1" required placeholder="Ingrese contraseña">
+                        </div>
+
+                        <input type="submit" id="subm-log" value="Ingresar">
+
+                    </form>
+                </div>
+                <h3>¿Aún no tenés una cuenta?</h3>
+                <button><a href="./register.html">Registrate</a></button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo_text">
+            <img src="./assets/logo.png" alt="logo-vw">
+            <p>VEGGIE-WAY</p>
+        </div>
+
+        <nav class="socials">
+            <ul class="soc-ul">
+                <li>
+                    <a href="https://www.facebook.com/veganw" target="_blank">
+                        <i class="fa-brands fa-facebook"><span>Facebook</span></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/_veggieway/" target="_blank">
+                        <i class="fa-brands fa-instagram"><span>Instagram</span></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h6>&copy; Creado por NICKS WILLIAM</h6>
+    </footer>
+</body>
+</html>

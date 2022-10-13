@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" href="./assets/broco-icon.png" type="icon/png">
+    <link rel="stylesheet" href="./assets/style.css" type="text/css">
+    <link rel="stylesheet" href="./assets/animations.css" type="text/css">
+    <link rel="stylesheet" href="./assets/mediaqueries.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/register-login.css" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo_text">
+            <img src="./assets/logo.png" alt="logo-vw">
+            <p>VEGGIE-WAY</p>
+        </div>
+
+        <nav>
+            <label for="menu-toggle" class="toggle-icon">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+
+            </label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+
+            <ul class="navbar">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html#about">Sobre Nosotros</a></li>
+                <li><a href="./index.html#products">Productos</a></li>
+                <li><a href="./index.html#contact">Contacto</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+
+            <div class="overlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="rbg">
+            <section id="register">
+                <h1>BIENVENID@ PARA REALIZAR TU COMPRA DEBÉS CREARTE UN USUARIO</h1>
+                <h2>Completa el siguiente formulario con tus datos y en breve vas a poder ingresar al E-Shop💳 para
+                    realizar tu pedido</h2>
+
+                <div class="register-data">
+                    <form action="#">
+
+                        <p>REGISTRO!</p>
+
+                        <div class="reg-box">
+                            <label for="name-reg">Nombre: </label>
+                            <input type="text" id="name-reg" placeholder="Ingrese su nombre" required>
+                        </div>
+
+                        <div class="reg-box">
+                            <label for="ape-reg">Apellido: </label>
+                            <input type="text" id="ape-reg" placeholder="Ingrese su apellido" required>
+                        </div>
+
+                        <div class="reg-box">
+                            <label for="mail-reg">E-Mail: </label>
+                            <input type="email" id="mail-reg" required placeholder="Ingrese correo electrónico">
+                        </div>
+
+                        <div class="reg-box">
+                            <label for="pass-reg1">Contraseña: </label>
+                            <input type="password" id="pass-reg1" required placeholder="Ingrese contraseña">
+                        </div>
+
+                        <div class="reg-box">
+                            <label for="pass-reg2">Repita contraseña: </label>
+                            <input type="password" id="pass-reg2" required placeholder="Repita su contraseña">
+                        </div>
+
+                        <div class="reg-check">
+                            <input type="checkbox" id="agree-reg" required>
+                            <label for="agree-reg" class="agree-lab">Acepto los términos y condiciones</label>
+                        </div>
+
+                        <input type="submit" id="subm-reg" value="Registrarse">
+
+
+                    </form>
+                </div>
+                <h3>¿Ya tenés una cuenta? </h3>
+                <button><a href="./login.html">Ingresá a tu cuenta</a></button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo_text">
+            <img src="./assets/logo.png" alt="logo-vw">
+            <p>VEGGIE-WAY</p>
+        </div>
+
+        <nav class="socials">
+            <ul class="soc-ul">
+                <li>
+                    <a href="https://www.facebook.com/veganw" target="_blank">
+                        <i class="fa-brands fa-facebook"><span>Facebook</span></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/_veggieway/" target="_blank">
+                        <i class="fa-brands fa-instagram"><span>Instagram</span></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h6>&copy; Creado por NICKS WILLIAM</h6>
+    </footer>
+</body>
+
+</html>

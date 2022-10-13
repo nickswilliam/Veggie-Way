@@ -1,0 +1,238 @@
+.lbg {
+    width: 100%;
+    background-image: url(./contact/contact-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--green-hard);
+}
+
+.rbg {
+    width: 100%;
+    background-image: url(./products/products-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--orange);
+}
+
+#register, 
+#login {
+    margin-top: 80px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 80px 30px;
+}
+
+#register h1,
+#login h1 {
+    font-size: 36px;
+    color: var(--white);
+    text-shadow: 2px 2px 1px var(--soft-black);
+    text-align: center;
+    width: 80%;
+    transition: all 0.2s ease;
+}
+
+#register h2,
+#login h2 {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--white);
+    text-shadow: 1.5px 1.5px 1px var(--soft-black);
+    text-align: center;
+    width: 82%;
+    transition: all 0.2s ease;
+}
+
+.register-data,
+.login-data { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.register-data form,
+.login-data form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    background-color: #e7f3e3e0;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px var(--black-text);
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.register-data form p ,
+.login-data form p {
+    align-self: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+.reg-box,
+.log-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.reg-box label,
+.log-box label {
+    color: var(--dark-blue);
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 1px 2px 1px var(--white);
+    border-bottom: 1px solid var(--green-hard);
+    padding: 2px 5px;
+}
+
+.reg-box input,
+.log-box input {
+    font-size: 18px;
+    font-weight: 600px;
+    color: var(--dark-blue);
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 10px 30px;
+    outline: none;
+    border: 1px solid transparent;
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.reg-box input:focus,
+.log-box input:focus {
+    border: 1px solid var(--green-mid);
+    box-shadow: 1px 1px 5px var(--dark-blue);
+    color: var(--green-mid);
+}
+
+.reg-box input::placeholder,
+.log-box input::placeholder{
+    color: var(--green-hard);
+}
+
+.reg-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: center;
+}
+
+.reg-check input{
+    display: none;
+}
+
+.reg-check label {
+    font-size: 18px;
+    color: var(--dark-blue);
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+}
+
+.reg-check label::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid var(--dark-blue);
+    border-radius: 2px;
+    align-self: center;
+    position: relative;
+    margin-right: 5px;
+    top: 3px;
+    cursor: pointer;
+    transition: all 0.25s ease-in;
+}
+
+#agree-reg:checked ~ .agree-lab{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transition: all 0.25s ease-out;
+}
+
+#agree-reg:checked ~ .agree-lab::before {
+    text-align: center;
+    background-color: #e7f3e3e0;
+    transition: all 0.2s ease-in;
+    border-radius: 50%;
+}
+
+#subm-reg,
+#subm-log {
+    align-self: center;
+    border-radius: 10px;
+    border: 2px solid var(--dark-blue);
+    padding: 10px 20px;
+    font-size: 20px;
+    color: var(--dark-blue);
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.15s ease-in;
+}
+
+#subm-reg:active,
+#subm-log:active {
+    background-color: #073b4cd8;
+    color: var(--white);
+    transition: all 0.15s ease-out;
+}
+
+#register h3,
+#login h3 {
+    color: var(--bg-soft-green);
+    font-weight: 600;
+    font-size: 24px;
+    text-shadow: 2px 2px 1px var(--black-text);
+}
+
+#register button,
+#login button {
+    background-color: var(--dark-blue);
+    border: 2px solid var(--bg-soft-green);
+    font-size: 24px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+#register button:active,
+#login button:active {
+    background-color: var(--orange);
+    transition: all 0.15s ease-in;
+}
+
+#register button > a,
+#login button > a {
+    color: var(--bg-soft-green);
+}
+

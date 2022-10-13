@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggie-Way 🌱</title>
+    <link rel="icon" href="./assets/broco-icon.png" type="icon/png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/animations.css">
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <div class="logo_text">
+            <img src="./assets/logo.png" alt="logo-vw">
+            <p>VEGGIE-WAY</p>
+        </div>
+
+        <nav>
+            <label for="menu-toggle" class="toggle-icon">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+
+            </label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+
+            <ul class="navbar">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="./register.html">Registro/Login</a></li>
+            </ul>
+
+            <div class="overlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="hero-bg">
+            <section id="hero">
+                <h1>BIENVENID@ A VEGGIE-WAY🌱</h1>
+                <p>Tu mejor opción en menú vegano, para hacer de tus días más nutritivos y más saludables.
+                    Contamos con diversas opciones desde viandas y congelados que te ayudarán a comer mucho más rápido y
+                    más simple.
+                </p>
+                <div class="hero-btns">
+                    <button class="hbtn-01"><a href="#contact">+INFO</a></button>
+                    <button class="hbtn-02"><a href="#about">SOBRE NOSOTROS</a></button>
+                </div>
+            </section>
+        </div>
+
+        <div class="about-bg">
+            <section id="about">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos una pareja ♥ que realiza comida 100% de origen <span>vegetal</span> ubicados en el corazón de la
+                    Zona Oeste del
+                    conurbano bonaerense.
+                    Ofrecemos menus diarios, con envíos a domicilio y take away en el local.
+                    Te invitamos a probar el sabor de lo natural y con ingredientes libre de sufrimiento animal, que es
+                    parte de nuestras raíces en las que nos basamos para elaborar las comidas.
+                </p>
+                <div class="about-prod">
+                    <h3>Si querés conocer nuestros productos... haz click en </h3>
+                    <button><a href="#products">Productos</a></button>
+                </div>
+            </section>
+        </div>
+
+        <div class="prod-bg">
+            <section id="products">
+                <div class="prod-top-info">
+                    <h2>NUESTROS PRODUCTOS</h2>
+                    <p>Conocé la diversidad de productos que tenemos para vos. Dentro de nuestro E-Commerce vas a poder
+                        encontrar una amplia variedad de menú diario</p>
+                    <h3>Para realizar tu pedido... Agregá el mismo al carrito 🛒... una vez finalizado regresá al
+                        apartado de <a href="./register.html">Registro/Login</a> y con tu cuenta ya podés retirar o
+                        recibir tu pedido
+                        😀.</h3>
+                </div>
+
+                <div class="prod-categ">
+                    <div class="prod-type">
+                        <h3>Burrito Vegan</h3>
+                        <img src="./assets/products/burrito-falafel.jpg" alt="burrito-falafel">
+                        <p>Burrito c/tortilla de maiz + Falafel + Ensalada + Salsa </p>
+
+                        <div class="prod-bot-info">
+                            <span>Precio: $1100</span>
+                            <button>+Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="prod-type">
+                        <h3>Brunch Veggie</h3>
+                        <img src="./assets/products/brunch-veggie.jpg" alt="brunch-veggie">
+                        <p>Brunch veggie con Mix de frutos rojos + Tomates Cherrys + Palta</p>
+
+                        <div class="prod-bot-info">
+                            <span>Precio: $1250</span>
+                            <button>+Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="prod-type">
+                        <h3>Burga al Plato</h3>
+                        <img src="./assets/products/burguer-veg01.jpg" alt="burguer-plato">
+                        <p>Burguer al plato + Guarnición de vegetales + Zapallo asado </p>
+
+                        <div class="prod-bot-info">
+                            <span>Precio: $1400</span>
+                            <button>+Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="prod-type">
+                        <h3>Seitán Asado</h3>
+                        <img src="./assets/products/seitan-veg.jpg" alt="seitan">
+                        <p>Seitán asado + Verduras Asadas + Mezclas de especias aromaticas y salsa a elección. </p>
+
+                        <div class="prod-bot-info">
+                            <span>Precio: $1700</span>
+                            <button>+Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="prod-type">
+                        <h3>Vegan Burguer</h3>
+                        <img src="./assets/products/vegan-burguer.jpg" alt="vegan-burguer">
+                        <p>Burguer simil carne + Cheddar + Pepinillos + LTC + Papas Rusticas </p>
+
+                        <div class="prod-bot-info">
+                            <span>Precio: $1550</span>
+                            <button>+Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="prod-type">
+                        <h3>Tofu al Wok</h3>
+                        <img src="./assets/products/tofu-wok.jpg" alt="wok-tofu">
+                        <p>Tofu salteado en Wok + Mix de Vegetales + Semillas + Arroz</p>
+
+                        <div class="prod-bot-info">
+                            <span>Precio: $1300</span>
+                            <button>+Agregar</button>
+                        </div>
+                    </div>
+
+                </div>
+                <h4>¿Te quedaste con ganas de más?
+                    <button>
+                        <a href="#contact">Escribinos</a>
+                    </button>
+                </h4>
+            </section>
+        </div>
+
+        <div class="contact-bg">
+            <section id="contact">
+                <h2 class="h2-inf">¿Querés enterarte de todas las novedades? Escribinos</h2>
+                <h3 class="h3-inf">Dejanos tus datos y suscribite a nuestro newsletter con todas las novedades semanales
+                    📅 que tenemos
+                    para vos...</h3>
+
+                <div class="cont-form">
+                    <form action="#" class="form-cont">
+                        <label for="name">NOMBRE Y APELLIDO: </label>
+                        <input type="text" id="name" placeholder="Ingrese su nombre y apellido" required>
+
+                        <label for="mail">E-MAIL: </label>
+                        <input type="email" id="mail" placeholder="Ingresá tu correo electrónico" required>
+
+                        <label for="location">ZONA DE CONTACTO</label>
+                        <input type="text" id="location" placeholder="Oeste, CABA, Sur, Norte" required>
+
+                        <label for="sugest">SUGERENCIAS Y COMENTARIOS: </label>
+                        <textarea id="sugest" cols="30" rows="5" placeholder="Ideas y sugerencias..."></textarea>
+
+                        <input type="submit" name="Envíar" id="subm">
+                    </form>
+
+                    <div class="contact-page">
+                        <h3>CONTACTANOS</h3>
+
+                        <div class="cont-inf">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <p>(011)15-2233-5567</p>
+                        </div>
+
+                        <div class="cont-inf">
+                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                            <p>info@veggie-way.com</p>
+                        </div>
+
+                        <div class="cont-inf">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <p>Rivadavia <span>18454</span>, Morón, Buenos Aires.</p>
+                        </div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2143529366863!2d-58.62566498514738!3d-34.649289167417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc75fd25404f5%3A0x5f9a1909e063c684!2sRivadavia%2018454%2C%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1664979305459!5m2!1ses!2sar"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+                <p class="text-phrase">"Si los mataderos tuvieran paredes de cristal, todos serían vegetarianos."
+                    <span> Paul McCartney</span>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo_text">
+            <img src="./assets/logo.png" alt="logo-vw">
+            <p>VEGGIE-WAY</p>
+        </div>
+
+        <nav class="socials">
+            <ul class="soc-ul">
+                <li>
+                    <a href="https://www.facebook.com/veganw" target="_blank">
+                        <i class="fa-brands fa-facebook"><span>Facebook</span></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/_veggieway/" target="_blank">
+                        <i class="fa-brands fa-instagram"><span>Instagram</span></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h6>&copy; Creado por NICKS WILLIAM</h6>
+    </footer>
+
+</body>
+
+</html>
