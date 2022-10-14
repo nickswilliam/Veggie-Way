@@ -1,6 +1,11 @@
 /*---Medium Devices & Notebooks ---*/
 
 @media (max-width: 1024px) {
+
+    .menu-toggle:checked~.overlay {
+        display: none;
+        
+    }
     #hero {
         max-width: 956px;
         gap: 50px;
@@ -184,6 +189,11 @@
         animation: slide-right 0.15s ease-in, fade 0.15s ease-in;
     }
 
+    .menu-toggle:checked~.overlay {
+        display: block;
+        transition: all 0.25s ease-in;
+    }
+
     #hero {
         max-width: 700px;
         gap: 30px;
@@ -363,6 +373,10 @@
         animation: slide-up 0.15s ease-in;
     }
 
+    .menu-toggle:checked~.overlay {
+        display: block;
+        transition: all 0.25s ease-in;
+    }
 
     #hero {
         max-width: 400px;
@@ -489,6 +503,9 @@
 /*---Medium Devices & Notebooks ---*/
 
 @media (max-width: 1024px) {
+    .menu-toggle:checked + .overlay {
+        display: none;
+    }
 
     .rbg #register,
     .lbg #login {
@@ -564,6 +581,10 @@
 /*//--- iPADS Tables & Some Mobile Devices ---//*/
 
 @media (max-width: 768px) {
+    .menu-toggle:checked + .overlay {
+        display: block;
+        transition: all 0.25s ease-in;
+    }
 
     .rbg #register,
     .lbg #login {
@@ -647,6 +668,10 @@
 
 /*//  --- Mobile Devices & Small Devices --- //*/
 @media (max-width: 480px) {
+    .menu-toggle:checked + .overlay {
+        display: block;
+        transition: all 0.25s ease-in;
+    }
     .rbg #register,
     .lbg #login {
         max-width: 400px;

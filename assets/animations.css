@@ -17,11 +17,6 @@ html {
     transition: all 0.25s ease;
 }
 
-.menu-toggle:checked~.overlay {
-    display: block;
-    transition: all 0.25s ease-in;
-}
-
 /*--- Animations names---*/
 
 @keyframes slide-up {

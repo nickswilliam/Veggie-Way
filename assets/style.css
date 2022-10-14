@@ -69,6 +69,10 @@ header nav .toggle-icon i {
     display: none;
 }
 
+.menu-toggle:checked~.overlay {
+    display: none;
+}
+
 nav .navbar {
     display: flex;
     align-items: center;

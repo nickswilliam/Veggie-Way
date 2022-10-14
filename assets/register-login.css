@@ -1,3 +1,9 @@
+
+.menu-toggle:checked + .overlay {
+    display: none;
+}
+
+
 .lbg {
     width: 100%;
     background-image: url(./contact/contact-bg.jpg);
