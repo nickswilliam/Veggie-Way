@@ -392,6 +392,14 @@ main {
     background-color: #d55f10e0;
 }
 
+.prod-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
 .products-container {
     display: flex;
     flex-direction: row;
@@ -470,7 +478,7 @@ main {
     transition: all 0.2s ease-out;
 }
 
-.more-prod{
+.btn-load{
     background-color: #000000b4;
     padding: 10px 20px;
     border-radius: 10px;
@@ -479,6 +487,10 @@ main {
     font-weight: 600;
     cursor: pointer;
     color: var(--bg-soft-green);
+}
+
+.btn-load:hover{
+    background-color: #d55f10ca;
 }
 
 #products h4 {

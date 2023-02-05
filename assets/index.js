@@ -27,32 +27,85 @@ const renderProduct = ({ product, price, description, img, id }) => {
         <div class="prod-bot-info">
             <span>Precio: $${price}</span>
             <button class="btn-add"
-            data-id=${id}>+Agregar</button>
+            data-id="${id}">+Agregar</button>
         </div>
-    <div>
+    </div>
     `
+}
+
+const renderFilteredProducts = category => {
+    const productsList = productsDAta.filter(product => product.categorie === category)
+    products.innerHTML = productsList.map(renderProduct).join('')
 }
 
 const renderDividedProducts = (index = 0) => {
     const productsToRender = productsController.dividedProducts[index]
-    products.innerHTML = productsToRender.map(renderProduct).join('')
+    products.innerHTML += productsToRender.map(renderProduct).join('')
 }
 
 const renderProducts = (index = 0, category = null) => {
     if (!category) {
         renderDividedProducts(index)
     } else {
-        //renderizar productos por categoria
+        renderFilteredProducts(category)
     }
 }
 
+const isLastIndex = () => productsController.nextProductsIndex === productsController.productsLimit
 
+const showMoreProducts = () => {
+    renderProducts(productsController.nextProductsIndex)
+    productsController.nextProductsIndex++;
+
+   if(isLastIndex()){
+    btnLoad.classList.add('hidden')
+   }
+}
+
+const changeBtnActiveState = selectedCategorie => {
+    const categories = [...filterList]
+    categories.forEach(categorieBtn =>{
+        if(categorieBtn.dataset.filter !== selectedCategorie){
+            categorieBtn.classList.remove('f-main')
+        } else{
+            categorieBtn.classList.add('f-main')
+        }
+    })
+}
+
+const changeShowMoreBtnState = selectedCategorie => {
+    if(!selectedCategorie){
+        btnLoad.classList.remove('hidden')
+        return
+    }
+    btnLoad.classList.add('hidden')
+}
+
+const changeFilterState = (selectedCategorie) => {
+    changeBtnActiveState(selectedCategorie)
+    changeShowMoreBtnState(selectedCategorie)
+}
+
+const applyFilter = (e) => {
+    if(!e.target.classList.contains('filter')) return;
+    console.log('soy un boton')
+
+    const clickedFilter = e.target.dataset.filter;
+    changeFilterState(clickedFilter)
+    if(!clickedFilter){
+        products.innerHTML = ''
+        renderProducts()
+    } else {
+        renderProducts(0, clickedFilter)
+        productsController.nextProductsIndex = 1; 
+    }
+}
 
 const init = () => {
-    document.addEventListener('DOMContentLoaded', ()=>{
         renderProducts();
-    })
-    
+        btnLoad.addEventListener('click', showMoreProducts)
+        productsFilter.addEventListener('click', applyFilter)
+
 }
 
 

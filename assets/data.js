@@ -14,7 +14,7 @@ const productsDAta = [
         price: 1250,
         description: "Brunch veggie con Mix de frutos rojos + Tomates Cherrys + Palta",
         img: "./assets/products/brunch-veggie.jpg",
-        categorie: "lunchs"
+        categorie: "lunch"
     },
     {
         id: 3,
@@ -46,7 +46,7 @@ const productsDAta = [
         price: 1300,
         description: "Tofu salteado en Wok + Mix de Vegetales + Semillas + Arroz",
         img: "./assets/products/vegan-burguer.jpg",
-        categorie: "lunchs"
+        categorie: "lunch"
     },
     {
         id: 7,
@@ -62,7 +62,7 @@ const productsDAta = [
         price: 1800,
         description: "Pizza Vegetal con masa Integral + Muzza de Almendras + Zucchini + Albahaca",
         img: "./assets/products/pizza-vegana.jpg",
-        categorie: "lunchs"
+        categorie: "lunch"
     },
     {
         id: 9,
@@ -117,7 +117,7 @@ const productsDAta = [
         product: "Portobello Burguer",
         price: 2100,
         description: "Hamburguesa de Portobello marinada en Salsa Caramelo + Huevo de Tofu + Tomate & Rúcula",
-        img: "./assets/products/burguer-portobelo.png",
+        img: "./assets/products/burguer-portobello.png",
         categorie: "burguers"
     },
     {
