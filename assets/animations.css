@@ -23,6 +23,7 @@ html {
 
 .show-overlay {
     display: block;
+    transition: all 0.25s ease-in;
 }
 
 /*--- Animations names---*/
@@ -49,11 +50,11 @@ html {
 
 @keyframes slide-right {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(100);
     }
 }
 

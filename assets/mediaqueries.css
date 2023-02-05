@@ -1,11 +1,6 @@
 /*---Medium Devices & Notebooks ---*/
 
 @media (max-width: 1024px) {
-
-    .menu-toggle:checked~.overlay {
-        display: none;
-        
-    }
     #hero {
         max-width: 956px;
         gap: 50px;
@@ -163,7 +158,7 @@
         display: flex;
     }
 
-    nav .navbar {
+    .navbar {
         display: none;
         flex-direction: column;
         align-items: flex-end;
@@ -175,19 +170,16 @@
         z-index: 3;
         border-bottom-left-radius: 10px;
         box-shadow: -4px 4px 8px var(--black-text);
+        animation: slide-right 0.15s ease forwards alternate, fade 0.15s ease-in forwards alternate;
     }
 
-    .menu-toggle:checked+.navbar {
+    .open-menu{
         display: flex;
-    }
-
-    .menu-toggle:checked + .navbar {
         animation: slide-left 0.15s ease forwards alternate, fade 0.15s ease-in forwards alternate;
     }
 
-    .menu-toggle:checked~.overlay {
-        display: block;
-        transition: all 0.25s ease-in;
+    .cart{
+        order: 1;
     }
 
     #hero {
@@ -355,23 +347,18 @@
         border-bottom-right-radius: 10px;
     }
 
-    .menu-toggle:checked+.navbar {
+    .open-menu {
         display: flex;
         align-items: center;
         box-shadow: 0px 4px 8px var(--black-text);
-    }
-
-    .menu-toggle:checked + .navbar {
         animation: slide-down 0.2s ease, fade 0.15s ease-in;
     }
-    
-    .menu-toggle:not(:checked) + .navbar {
-        animation: slide-up 0.15s ease-in;
-    }
 
-    .menu-toggle:checked~.overlay {
-        display: block;
-        transition: all 0.25s ease-in;
+    .open-cart{
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 4px 8px var(--black-text);
+        animation: slide-down 0.2s ease, fade 0.15s ease-in;
     }
 
     #hero {
@@ -499,7 +486,7 @@
 /*---Medium Devices & Notebooks ---*/
 
 @media (max-width: 1024px) {
-    .menu-toggle:checked + .overlay {
+    .menu-toggle:checked+.overlay {
         display: none;
     }
 
@@ -577,7 +564,7 @@
 /*//--- iPADS Tables & Some Mobile Devices ---//*/
 
 @media (max-width: 768px) {
-    .menu-toggle:checked + .overlay {
+    .menu-toggle:checked+.overlay {
         display: block;
         transition: all 0.25s ease-in;
     }
@@ -664,10 +651,11 @@
 
 /*//  --- Mobile Devices & Small Devices --- //*/
 @media (max-width: 480px) {
-    .menu-toggle:checked + .overlay {
+    .menu-toggle:checked+.overlay {
         display: block;
         transition: all 0.25s ease-in;
     }
+
     .rbg #register,
     .lbg #login {
         max-width: 400px;
@@ -732,7 +720,7 @@
         width: 90%;
     }
 
-    .rbg .reg-check label::before{
+    .rbg .reg-check label::before {
         top: 10px;
         margin-right: 10px;
     }

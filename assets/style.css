@@ -10,7 +10,9 @@
     --golden-rod: #E2A60A;
     --dark-blue: #073b4c;
     --green-mid: #06d64b;
+    --red-del: #ff4040;
 }
+
 
 * {
     margin: 0;
@@ -42,9 +44,58 @@ header nav{
     gap: 30px;
 }
 
-.cart-div{
-    padding: 0px 10px 10px 10px;
+
+
+header .logo_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
+.logo_text img {
+    width: 75px;
+    height: 45px;
+}
+
+.logo_text p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green-hard);
+    text-align: center;
+}
+
+
+header nav .toggle-icon i {
+    font-size: 24px;
+    border-radius: 5px;
+    border: 2px solid var(--green-hard);
+    padding: 6px 10px;
+    color: var(--green-hard);
+    cursor: pointer;
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.navbar li a {
+    color: var(--green-hard);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
 
 .cart-btn {
     color: var(--green-hard);
@@ -69,59 +120,174 @@ header nav{
 }
 
 .cart{
-    display: none;
+   position: absolute;
+   top: 80px;
+   right: 0;
+   padding: 20px 30px;
+   background-color: var(--bg-soft-green);
+   z-index: 3;
+   border-bottom-left-radius: 10px;
+   box-shadow: -4px 4px 8px var(--black-text);
+   display: none;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 25px;
+   overflow-y: scroll;
+   height: calc(100vh - 80px);
+   animation: slide-right 0.15s ease forwards, fade 0.2s ease-in forwards;
 }
 
+.cart::-webkit-scrollbar{
+    display: none;
+  }
 
-header .logo_text {
+.cart h2 {
+    color: var(--green-hard);
+    padding: 3px 0px;
+    border-bottom: 2px solid var(--green-hard);
+}
+
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-prod{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--green-hard);
+    padding: 10px;
+}
+
+.cart-prod img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: -4px 4px 4px var(--black-text);
+}
+
+.cart-prod-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.cart-prod-info h3{
+    color: var(--green-hard);
+}
+.cart-prod-info span{
+    color: var(--soft-black);
+}
+
+.cart-prod-info p{
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px var(--black-text);
+}
+
+.cart-controlls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.handle{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px 13px;
+    color: var(--green-hard);
+    font-weight: 600;
+    font-size: 18px;
+    border: 2px solid var(--green-hard);
+    cursor: pointer;
+}
+
+.cart-quantity{
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--green-hard);
+    margin: 10px;
+}
+.cart-rest:hover{
+    background-color: #ff4040bc;
+}
+
+.cart-add:hover{
+    background-color: #06d64b95;
+}
+
+.divider{
+    border: 1px solid var(--green-hard);
+    width: 100%;
+    align-self: center;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.cart-total h3{
+    color: var(--green-hard);
+    font-size: 22px;
+}
+
+.cart-total p{
+    color: var(--orange);
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px var(--black-text);
+}
+
+.cart-btns{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.btn-buy{
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 18px;
+    color: var(--black-text);
+    border-radius: 10px;
+    background-color: var(--green-mid);
     cursor: pointer;
 }
 
-.logo_text img {
-    width: 75px;
-    height: 45px;
+.btn-buy:hover{
+    background-color: #06d64b95;
 }
 
-.logo_text p {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--green-hard);
-    text-align: center;
-}
-
-
-
-header nav .toggle-icon i {
-    font-size: 24px;
-    border-radius: 5px;
-    border: 2px solid var(--green-hard);
-    padding: 6px 10px;
-    color: var(--green-hard);
+.btn-delete{
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 18px;
+    color: var(--black-text);
+    border-radius: 10px;
+    background-color: var(--red-del);
     cursor: pointer;
-    display: none;
 }
 
-.menu-toggle {
-    display: none;
-}
-
-nav .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 30px;
-    text-align: center;
-}
-
-.navbar li a {
-    color: var(--green-hard);
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
+.btn-delete:hover{
+    background-color: #ff4040bc;
 }
 
 main {
@@ -784,9 +950,15 @@ footer h6 {
 }
 
 /* -----------------------
-Class to hide elements by JS
+Another use of Class in project
 ---------------------------------- */
 
 .hidden{
     visibility: hidden;
 }
+
+.open-cart{
+   display: flex; 
+   animation: slide-left 0.15s ease forwards, fade 0.15s ease-in forwards;
+}
+
