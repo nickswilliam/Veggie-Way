@@ -45,7 +45,7 @@ const productsDAta = [
         product: "Tofu al Wok",
         price: 1300,
         description: "Tofu salteado en Wok + Mix de Vegetales + Semillas + Arroz",
-        img: "./assets/products/vegan-burguer.jpg",
+        img: "./assets/products/tofu-wok.jpg",
         categorie: "lunch"
     },
     {

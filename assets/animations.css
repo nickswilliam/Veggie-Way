@@ -13,8 +13,16 @@ html {
     left: 0;
     background-attachment: scroll;
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     display: none;
     transition: all 0.25s ease;
+}
+
+/*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa.
+  Aclarar que funciona porque son elementos hermanos y overlay esta debajo de los dos inputs en el código.*/
+
+.show-overlay {
+    display: block;
 }
 
 /*--- Animations names---*/

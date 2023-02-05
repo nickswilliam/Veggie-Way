@@ -6,8 +6,10 @@ const filterList = document.querySelectorAll('.filter')
 const btnLoad = document.querySelector('.btn-load')
 const btnBuy = document.querySelector('.btn-buy')
 const cartCount = document.querySelector('.cart-count')
-const barsMenu = document.querySelector('.menu-label')
-const cartMenu = document.querySelector('.navbar-list')
+const barsBtn = document.querySelector('.menu-toggle')
+const barsMenu = document.querySelector('.navbar')
+const cartBtn = document.querySelector('.cart-menu')
+const cartMenu = document.querySelector('.cart')
 const overlay = document.querySelector('.overlay')
 const successModal = document.querySelector('add-modal')
 const deleteBtn = document.querySelector('btn-delete')
@@ -101,10 +103,32 @@ const applyFilter = (e) => {
     }
 }
 
+const menuToggle = () => {
+    barsMenu.classList.toggle('open-menu')
+    if(cartMenu.classList.contains('open-cart')){
+        cartMenu.classList.remove('open-cart')
+        return
+    }
+    overlay.classList.toggle('show-overlay')
+}
+
+const cartToggle = () => {
+    cartMenu.classList.toggle('open-cart')
+    if(barsMenu.classList.contains('open-menu')){
+        barsMenu.classList.remove('open-menu')
+        return
+    }
+    overlay.classList.toggle('show-overlay')
+}
+
 const init = () => {
         renderProducts();
         btnLoad.addEventListener('click', showMoreProducts)
         productsFilter.addEventListener('click', applyFilter)
+        
+        barsBtn.addEventListener('click', toggleMenu)
+        cartBtn.addEventListener('click', toggleCart)
+
 
 }
 

@@ -184,10 +184,6 @@
     .menu-toggle:checked + .navbar {
         animation: slide-left 0.15s ease forwards alternate, fade 0.15s ease-in forwards alternate;
     }
-    
-    .menu-toggle:not(:checked) + .navbar {
-        animation: slide-right 0.15s ease-in, fade 0.15s ease-in;
-    }
 
     .menu-toggle:checked~.overlay {
         display: block;
