@@ -23,12 +23,15 @@
             <p>VEGGIE-WAY</p>
         </div>
 
+
+
         <nav>
             <label for="menu-toggle" class="toggle-icon">
                 <i class="fa-sharp fa-solid fa-bars"></i>
 
             </label>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
 
 
             <ul class="navbar">
@@ -39,12 +42,38 @@
                 <li><a href="./register.html">Registro/Login</a></li>
             </ul>
 
+            <div class="cart-div">
+
+                <i class="fa-sharp fa-solid fa-cart-shopping cart">
+                    <div class="cart-count">
+                        0
+                    </div>
+                </i>
+            </div>
+
+            <div class="cart hidden">
+                <h2>Tu compra:</h2>
+
+                <div class="cart-container">
+
+                </div>
+
+                <span class="divider"></span>
+
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total">$2300</span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar Carrito</button>
+            </div>
+
             <div class="overlay"></div>
         </nav>
     </header>
 
     <main>
-        
+
         <div class="hero-bg">
             <section id="hero">
                 <h1>BIENVENID@ A VEGGIE-WAY🌱</h1>
@@ -62,7 +91,8 @@
         <div class="about-bg">
             <section id="about">
                 <h2>SOBRE NOSOTROS</h2>
-                <p>Somos una pareja ♥ que realiza comida 100% de origen <span>vegetal</span> ubicados en el corazón de la
+                <p>Somos una pareja ♥ que realiza comida 100% de origen <span>vegetal</span> ubicados en el corazón de
+                    la
                     Zona Oeste del
                     conurbano bonaerense.
                     Ofrecemos menus diarios, con envíos a domicilio y take away en el local.
@@ -88,7 +118,14 @@
                         😀.</h3>
                 </div>
 
-                <div class="prod-categ">
+                <div class="products-filter">
+                    <button class="filter f-main" id="f-all">Todas</button>
+                    <button class="filter" id="f-lunch">Almuerzo/Cena</button>
+                    <button class="filter" id="f-burguers">Hamburguesas</button>
+                    <button class="filter" id="f-meatvegetal">Carnes Vegetales</button>
+                </div>
+
+                <div class="products-container">
                     <div class="prod-type">
                         <h3>Burrito Vegan</h3>
                         <img src="./assets/products/burrito-falafel.jpg" alt="burrito-falafel">
@@ -156,6 +193,9 @@
                     </div>
 
                 </div>
+
+                <button class="more-prod">Ver más</button>
+
                 <h4>¿Te quedaste con ganas de más?
                     <button>
                         <a href="#contact">Escribinos</a>
@@ -245,6 +285,8 @@
         <h6>&copy; Creado por NICKS WILLIAM</h6>
     </footer>
 
+    <script src="./assets/data.js"></script>
+     <script src="./assets/index.js"></script>
 </body>
 
 </html>

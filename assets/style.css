@@ -35,6 +35,36 @@ header {
     z-index: 2;
 }
 
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav .cart-div{
+    padding: 0px 10px 10px 10px;
+}
+
+header nav .cart-count{
+    background-color: var(--golden-rod);
+    border: 2px solid var(--green-hard);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    left: 10px;
+    top: 7px;
+    color: var(--green-hard);
+    font-weight: 600;
+}
+
+header nav .cart {
+    color: var(--green-hard);
+    font-size: 22px;
+    cursor: pointer;
+}
+
 header .logo_text {
     display: flex;
     flex-direction: column;
@@ -54,6 +84,8 @@ header .logo_text {
     color: var(--green-hard);
     text-align: center;
 }
+
+
 
 header nav .toggle-icon i {
     font-size: 24px;
@@ -336,11 +368,35 @@ main {
     transition: all 0.2s ease-in;
 }
 
-.prod-categ {
+
+.products-filter{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter{
+    background-color: #000000b4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--golden-rod);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--bg-soft-green);
+}
+
+.f-main{
+    background-color: #d55f10e0;
+}
+
+.products-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     gap: 30px;
 }
@@ -412,6 +468,17 @@ main {
     color: var(--bg-soft-green);
     font-size: 18px;
     transition: all 0.2s ease-out;
+}
+
+.more-prod{
+    background-color: #000000b4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--golden-rod);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--bg-soft-green);
 }
 
 #products h4 {
@@ -698,4 +765,12 @@ footer .logo_text {
 footer h6 {
     color: var(--green-hard);
     font-size: 20px;
+}
+
+/* -----------------------
+Class to hide elements by JS
+---------------------------------- */
+
+.hidden{
+    visibility: hidden;
 }
