@@ -158,7 +158,7 @@ const renderCartProduct = ({ product, img, id, price, quantity }) => {
         <div class="cart-prod-info">
             <h3>${product}</h3>
                 <span>PRECIO:</span>
-                <p>$${price}</p>
+                <p>$${price*quantity}</p>
         </div>
 
         <div class="cart-controlls">
