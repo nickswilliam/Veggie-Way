@@ -90,7 +90,6 @@ const changeFilterState = (selectedCategorie) => {
 
 const applyFilter = (e) => {
     if(!e.target.classList.contains('filter')) return;
-    console.log('soy un boton')
 
     const clickedFilter = e.target.dataset.filter;
     changeFilterState(clickedFilter)
@@ -121,6 +120,30 @@ const toggleCart = () => {
     overlay.classList.toggle('show-overlay')
 }
 
+const closeOnScroll = () => {
+    if(
+        !barsMenu.classList.contains('open-menu') &&
+        !cartMenu.classList.contains('open-cart')
+    ) return;
+
+    barsMenu.classList.remove('open-menu')
+    cartMenu.classList.remove('open-cart')
+    overlay.classList.remove('show-overlay')
+    
+}
+
+const closeOnClick = (e) => {
+    if(!e.target.classList.contains('navbar-link')) return;
+    barsMenu.classList.remove('open-menu')
+    overlay.classList.remove('show-overlay')
+}
+
+const closeOnOverlayClick = () => {
+    barsMenu.classList.remove('open-menu')
+    cartMenu.classList.remove('open-cart')
+    overlay.classList.remove('show-overlay')
+}
+
 const init = () => {
         renderProducts();
         btnLoad.addEventListener('click', showMoreProducts)
@@ -128,6 +151,11 @@ const init = () => {
         
         barsBtn.addEventListener('click', toggleMenu)
         cartBtn.addEventListener('click', toggleCart)
+
+        window.addEventListener('scroll', closeOnScroll)
+
+        barsMenu.addEventListener('click', closeOnClick)
+        overlay.addEventListener('click', closeOnOverlayClick)
 
 }
 
