@@ -203,31 +203,31 @@ const showSuccessModal = msg => {
 }
 
 const disableBtn = btn => {
-    if(!cart.length){
+    if (!cart.length) {
         btn.classList.add('hidden')
     } else {
         btn.classList.remove('hidden')
     }
 }
 
+const renderCartBubble = () => {
+    cartCount.textContent = cart.reduce((acc, curr) => acc + curr.quantity, 0)
+}
+
 const checkCartState = () => {
-    //guardar en local storage
     saveLocalStorage(cart);
-    //renderizar en el carrito
     renderCart();
-    //calcular y mostrar el total
     showTotal();
-    //deshabilitar los botones de compra o vaciar carrito
     disableBtn(btnBuy);
     disableBtn(deleteBtn);
-    //muestre la cantidad de elementos en el carrito en el bubble
+    renderCartBubble();
 }
 
 const addUnitToProduct = product => {
-    cart = cart.map(cartProduct => cartProduct.id === product.id 
-        ? {...cartProduct, quantity: cartProduct.quantity + 1} 
+    cart = cart.map(cartProduct => cartProduct.id === product.id
+        ? { ...cartProduct, quantity: cartProduct.quantity + 1 }
         : cartProduct
-        )
+    )
 }
 
 const addProduct = (e) => {
@@ -237,17 +237,77 @@ const addProduct = (e) => {
     const productToCart = { id, img, product, price }
 
     if (isExistingCartProduct(productToCart)) {
-        //agregar unidades al producto existente
         addUnitToProduct(productToCart)
-        //mostrar mensaje de exito
         showSuccessModal("Se agregó una unidad del producto al carrito")
     } else {
-        //agregar el producto al carrito
         createCartProduct(productToCart);
-        //mostrar mensaje de exito
         showSuccessModal("El producto se ha agregado al carrito.")
     }
 
+    checkCartState();
+}
+
+const resetCartItems = () => {
+    cart = []
+    checkCartState()
+}
+
+const completeCartAction = (confirmMsg, successMsg) => {
+    if (!cart.length) return;
+    if (window.confirm(confirmMsg)) {
+        //vaciar carrito 
+        resetCartItems()
+        //mostrar mensaje de exito
+        alert(successMsg)
+    }
+}
+
+const completeBuy = () => {
+    completeCartAction(
+        '¿Confirmar compra?',
+        'El pedido ha sido realizado exitosamente.'
+    )
+}
+
+const deleteCart = () => {
+    completeCartAction(
+        '¿Desea eliminar todos los productos del carrito?',
+        'El carrito se ha vaciado'
+    )
+}
+
+const removeProductFromCart = ({ id }) => {
+    cart = cart.filter(product => product.id !== id)
+    checkCartState();
+}
+
+const substractUnitProduct = ({ id }) => {
+    cart = cart.map(product => product.id === id ? { ...product, quantity: product.quantity - 1 } : product)
+}
+
+const handlePlusBtnEvent = id => {
+    const existingProduct = cart.find(product => product.id === id)
+    addUnitToProduct(existingProduct)
+}
+
+const handleMinusBtnEvent = id => {
+    const existingProduct = cart.find(product => product.id === id)
+
+    if (existingProduct.quantity === 1) {
+        if(window.confirm('¿Desea eliminar el producto del carrito?')){
+            removeProductFromCart(existingProduct)
+        }
+        return;
+    }
+    substractUnitProduct(existingProduct)
+}
+
+const handleQuantity = e => {
+    if (e.target.classList.contains('cart-rest')) {
+        handleMinusBtnEvent(e.target.dataset.id)
+    } else if (e.target.classList.contains('cart-add')) {
+        handlePlusBtnEvent(e.target.dataset.id)
+    }
     checkCartState();
 }
 
@@ -269,8 +329,13 @@ const init = () => {
 
     products.addEventListener('click', addProduct)
 
+    btnBuy.addEventListener('click', completeBuy)
+    deleteBtn.addEventListener('click', deleteCart)
+    productsCart.addEventListener('click', handleQuantity)
+
     disableBtn(btnBuy);
     disableBtn(deleteBtn);
+    renderCartBubble();
 }
 
 
