@@ -964,3 +964,22 @@ Another use of Class in project
    animation: slide-left 0.15s ease forwards, fade 0.15s ease-in forwards;
 }
 
+.add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-soft-green);
+    background-color: var(--green-hard);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+  }
+  
+  .active-modal{
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+  }
+
