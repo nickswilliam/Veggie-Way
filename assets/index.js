@@ -156,7 +156,7 @@ const renderCartProduct = ({ product, img, id, price, quantity }) => {
         <img src=${img} alt=${product}>
 
         <div class="cart-prod-info">
-            <h3>${product}</h3>
+            <h3>${product.toUpperCase()}</h3>
                 <span>PRECIO:</span>
                 <p>$${price*quantity}</p>
         </div>

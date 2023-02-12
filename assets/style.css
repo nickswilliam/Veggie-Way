@@ -125,13 +125,14 @@ header {
    z-index: 3;
    border-bottom-left-radius: 10px;
    box-shadow: -4px 4px 8px var(--black-text);
-   display: none;
+   display: flex;
    flex-direction: column;
    align-items: flex-start;
    gap: 25px;
    overflow-y: scroll;
    height: calc(100vh - 80px);
-   animation: slide-right 0.15s ease forwards, fade 0.2s ease-in forwards;
+   transform: translateX(200%);
+   transition: all ease 0.2s;
 }
 
 .cart::-webkit-scrollbar{
@@ -960,8 +961,8 @@ Another use of Class in project
 }
 
 .open-cart{
-   display: flex; 
-   animation: slide-left 0.15s ease forwards, fade 0.15s ease-in forwards;
+   transform: translateX(0);
+   transition: all ease-in 0.2s;
 }
 
 .add-modal {

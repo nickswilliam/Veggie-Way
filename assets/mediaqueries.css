@@ -160,7 +160,7 @@
     }
 
     .navbar {
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: flex-end;
         position: absolute;
@@ -171,11 +171,13 @@
         z-index: 3;
         border-bottom-left-radius: 10px;
         box-shadow: -4px 4px 8px var(--black-text);
+        transform: translateX(200%);
+        transition: all 0.2s ease-out;
     }
 
     .open-menu{
-        display: flex;
-        animation: slide-left 0.15s ease forwards alternate, fade 0.15s ease-in forwards alternate;
+       transform: translateX(0);
+       transition: all 0.2s ease-in;
     }
 
     #hero {
@@ -362,7 +364,10 @@
         left: 0px;
         text-align: center;
         border-bottom-right-radius: 10px;
+        transform: translateY(-200%);
+        transition: all ease-out 0.25s;
     }
+
 
     .cart{
         left: 0px;
@@ -370,7 +375,11 @@
         text-align: center;
         border-bottom-right-radius: 10px;
         padding: 10px 15px;
+        transform: translateY(-200%);
+        transition: all ease-out 0.25s;
+        
     }
+
 
     .cart h2{
         font-size: 22px;
@@ -418,17 +427,18 @@
     }
 
     .open-menu {
-        display: flex;
         align-items: center;
         box-shadow: 0px 4px 8px var(--black-text);
-        animation: slide-down 0.2s ease, fade 0.15s ease-in;
+        transform: translateY(0);
+        transition: all 0.25s ease-in;
     }
 
     .open-cart{
         display: flex;
         align-items: center;
         box-shadow: 0px 4px 8px var(--black-text);
-        animation: slide-down 0.2s ease, fade 0.15s ease-in;
+        transform: translateY(0);
+        transition: all 0.25s ease-in;
     }
 
     #hero {
