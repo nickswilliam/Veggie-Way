@@ -14,16 +14,17 @@ html {
     background-attachment: scroll;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    display: none;
-    transition: all 0.25s ease;
+    visibility: hidden;
+    animation: fade forwards 0.2s ease-out;
+    transition: all 0.15s ease;
 }
 
-/*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa.
-  Aclarar que funciona porque son elementos hermanos y overlay esta debajo de los dos inputs en el código.*/
 
 .show-overlay {
     display: block;
-    transition: all 0.25s ease-in;
+    visibility: visible;
+    animation: fade forwards 0.2s ease-out;
+    transition: all 0.15s ease-in;
 }
 
 /*--- Animations names---*/

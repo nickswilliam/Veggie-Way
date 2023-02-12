@@ -132,6 +132,7 @@ header {
    overflow-y: scroll;
    height: calc(100vh - 80px);
    transform: translateX(200%);
+   animation: fade ease 0.2s forwards;
    transition: all ease 0.2s;
 }
 
@@ -962,6 +963,7 @@ Another use of Class in project
 
 .open-cart{
    transform: translateX(0);
+   animation: fade ease 0.2s forwards;
    transition: all ease-in 0.2s;
 }
 
